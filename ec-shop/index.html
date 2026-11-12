@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>てづくり堂｜ハンドメイド雑貨のお店</title>
+<meta name="description" content="一点もののハンドメイド雑貨をお届けする小さなお店「てづくり堂」（ポートフォリオ用サンプル）。">
+<style>
+:root{--ink:#33302a;--paper:#fdfaf5;--accent:#c96f4a;--accent-d:#a85634;--sage:#7d8c6f;--line:#e7ddd0;--max:1100px;--radius:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--paper);line-height:1.75}
+header{position:sticky;top:0;z-index:30;background:rgba(253,250,245,.97);border-bottom:1px solid var(--line)}
+.nav{max-width:var(--max);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;gap:1rem}
+.logo{font-size:1.3rem;font-weight:800;text-decoration:none;letter-spacing:.12em}
+.logo span{color:var(--accent)}
+.nav ul{display:flex;gap:1.3rem;list-style:none;font-size:.92rem}
+.nav ul a{text-decoration:none}
+.cart-btn{position:relative;background:var(--accent);color:#fff;border:none;padding:.55rem 1.2rem;border-radius:999px;font-weight:700;cursor:pointer;font-size:.92rem}
+.cart-btn:hover{background:var(--accent-d)}
+.cart-count{position:absolute;top:-8px;right:-6px;background:#33302a;color:#fff;font-size:.72rem;min-width:22px;height:22px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0 5px}
+.hero{text-align:center;padding:4rem 1rem 3rem;background:
+ radial-gradient(ellipse at 15% 20%,rgba(201,111,74,.14),transparent 50%),
+ radial-gradient(ellipse at 85% 80%,rgba(125,140,111,.18),transparent 50%)}
+.hero .pill{display:inline-block;border:1px solid var(--accent);color:var(--accent);border-radius:999px;padding:.2rem 1rem;font-size:.82rem;font-weight:700;margin-bottom:1rem}
+.hero h1{font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.4}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{max-width:620px;margin:1.1rem auto 0;color:#6f675c}
+section{padding:3.5rem 1rem}
+.wrap{max-width:var(--max);margin:auto}
+.sec-head{text-align:center;margin-bottom:2.2rem}
+.sec-head h2{font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:.06em}
+.sec-head p{color:#6f675c;margin-top:.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem}
+.product{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.product .visual{height:150px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.v1{background:linear-gradient(135deg,#f6ddc8,#eec39f)} .v2{background:linear-gradient(135deg,#dfe7d5,#c3d2b2)}
+.v3{background:linear-gradient(135deg,#f9e8c9,#f3d79b)} .v4{background:linear-gradient(135deg,#e8dff0,#cdbce0)}
+.v5{background:linear-gradient(135deg,#fbe3e0,#f2bdb6)} .v6{background:linear-gradient(135deg,#dcebf2,#a9cbdd)}
+.v7{background:linear-gradient(135deg,#efe6da,#d8c6ab)} .v8{background:linear-gradient(135deg,#e2efe4,#b5d6bc)}
+.product .body{padding:1.1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.product h3{font-size:1.02rem}
+.product .desc{font-size:.85rem;color:#6f675c;flex:1}
+.product .row{display:flex;align-items:center;justify-content:space-between;margin-top:.6rem}
+.price{font-weight:800;font-size:1.12rem}
+.price small{font-size:.75rem;color:#6f675c;font-weight:400}
+.add-btn{background:var(--sage);color:#fff;border:none;padding:.55rem 1rem;border-radius:999px;font-weight:700;cursor:pointer;font-size:.88rem}
+.add-btn:hover{opacity:.9}
+.add-btn.added{background:var(--accent)}
+.badge{display:inline-block;font-size:.7rem;background:var(--accent);color:#fff;border-radius:4px;padding:.05rem .5rem;font-weight:700;width:fit-content}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:center}
+.about .face{font-size:6rem;text-align:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:2rem}
+.about p{color:#554e44;margin-bottom:.8rem}
+.ship{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th,td{border-bottom:1px solid var(--line);padding:.65rem .4rem;text-align:left;vertical-align:top}
+th{width:34%;color:var(--accent);white-space:nowrap}
+.ship ul{margin:.8rem 0 0 1.2rem;font-size:.92rem;color:#554e44}
+footer{border-top:1px solid var(--line);padding:2rem 1rem;text-align:center;color:#6f675c;font-size:.85rem}
+.drawer{position:fixed;top:0;right:0;width:min(400px,92vw);height:100dvh;background:#fff;box-shadow:-8px 0 30px rgba(0,0,0,.18);z-index:50;transform:translateX(105%);transition:transform .3s ease;display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer header{position:static;display:flex;justify-content:space-between;align-items:center;padding:1rem;border-bottom:1px solid var(--line)}
+.drawer h2{font-size:1.15rem}
+.close-btn{background:none;border:none;font-size:1.4rem;cursor:pointer;line-height:1}
+.cart-items{flex:1;overflow-y:auto;padding:1rem;display:grid;gap:.8rem;align-content:start}
+.cart-item{display:flex;gap:.8rem;align-items:center;border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem}
+.cart-item .emoji{font-size:1.8rem}
+.cart-item .info{flex:1}
+.cart-item .info .nm{font-weight:700;font-size:.92rem}
+.cart-item .info .pr{font-size:.85rem;color:#6f675c}
+.qty{display:flex;align-items:center;gap:.35rem}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-weight:700}
+.remove{background:none;border:none;color:var(--accent);cursor:pointer;font-size:.8rem;text-decoration:underline}
+.cart-foot{border-top:1px solid var(--line);padding:1rem;display:grid;gap:.5rem}
+.cart-foot .line{display:flex;justify-content:space-between;font-size:.94rem}
+.cart-foot .total{display:flex;justify-content:space-between;font-size:1.15rem;font-weight:800;border-top:1px dashed var(--line);padding-top:.6rem}
+.checkout{background:var(--accent);color:#fff;border:none;padding:.85rem;border-radius:999px;font-weight:700;font-size:1rem;cursor:pointer}
+.checkout:hover{background:var(--accent-d)}
+.empty{color:#6f675c;text-align:center;padding:2rem 0}
+.overlay{position:fixed;inset:0;background:rgba(30,25,20,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.show{opacity:1;pointer-events:auto}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,80px);background:#33302a;color:#fff;padding:.7rem 1.4rem;border-radius:999px;z-index:60;transition:transform .3s;font-size:.92rem}
+.toast.show{transform:translate(-50%,0)}
+@media(max-width:640px){.nav ul{display:none}section{padding:2.6rem 1rem}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#">てづくり<span>堂</span></a>
+    <ul>
+      <li><a href="#products">商品一覧</a></li>
+      <li><a href="#about">ショップ紹介</a></li>
+      <li><a href="#shipping">送料・お届け</a></li>
+    </ul>
+    <button class="cart-btn" id="openCart" type="button">🛒 カート<span class="cart-count" id="cartCount">0</span></button>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="pill">一点もの ・ 手作り</div>
+  <h1>手のぬくもりを、<br><em>毎日の暮らしへ。</em></h1>
+  <p>小さな工房でひとつずつ作る、ハンドメイド雑貨のお店です。同じものは二つとない、あなただけの一品をお届けします。</p>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head"><h2>商品一覧</h2><p>全品ギフトラッピング対応（無料）</p></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>ショップ紹介</h2></div>
+    <div class="about">
+      <div class="face">🧶<div style="font-size:1rem;margin-top:.6rem">工房「てづくり堂」</div></div>
+      <div>
+        <p>「てづくり堂」は、長野の小さな工房で夫婦ふたりが営むハンドメイド雑貨のお店です。2018年の開店以来、布小物・陶器・木工品を中心に、すべて手作業で制作しています。</p>
+        <p>素材は国産の天然素材を中心に選び、長く使える丈夫な仕上げが自慢です。修理のご相談も承っていますので、末永くご愛用いただければ嬉しいです。</p>
+        <p>ご注文から通常3〜5日で発送。ひとつひとつ検品し、心を込めて梱包してお届けします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shipping">
+  <div class="wrap">
+    <div class="sec-head"><h2>送料・お届けについて</h2></div>
+    <div class="ship">
+      <table>
+        <tr><th>送料</th><td>全国一律 ¥550（税込）／ <strong>¥8,000以上のご購入で送料無料</strong></td></tr>
+        <tr><th>配送方法</th><td>ヤマト運輸（宅急便・宅急便コンパクト）／ 一部商品は日本郵便</td></tr>
+        <tr><th>発送目安</th><td>ご注文確定後 3〜5営業日以内に発送（受注制作品は商品ページに記載）</td></tr>
+        <tr><th>お支払い</th><td>クレジットカード／銀行振込／コンビニ払い／キャリア決済</td></tr>
+        <tr><th>返品・交換</th><td>不良品は到着後7日以内にご連絡ください。無料で交換いたします。お客様都合の返品は未使用品に限り可（送料はお客様負担）</td></tr>
+      </table>
+      <ul>
+        <li>ギフトラッピングは無料です。カート画面の備考欄でお知らせください。</li>
+        <li>海外への発送は現在対応しておりません。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong style="color:var(--ink)">てづくり堂</strong>（架空ショップ）｜ お問い合わせ： sample@example.com</p>
+  <p style="margin-top:.4rem">ポートフォリオ用サンプル（架空）— 商品・価格・ショップ情報はすべて架空のものです。実際の購入はできません。</p>
+  <p>© 2026 Tezukuri-do (Sample)</p>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="ショッピングカート">
+  <header>
+    <h2>🛒 ショッピングカート</h2>
+    <button class="close-btn" id="closeCart" type="button" aria-label="閉じる">×</button>
+  </header>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="line"><span>小計</span><span id="subtotal">¥0</span></div>
+    <div class="line"><span>送料</span><span id="shippingFee">¥0</span></div>
+    <div class="line" id="freeShipNote" style="color:var(--accent);font-size:.84rem"></div>
+    <div class="total"><span>合計（税込）</span><span id="grandTotal">¥0</span></div>
+    <button class="checkout" id="checkoutBtn" type="button">購入手続きへ進む（サンプル）</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+var PRODUCTS = [
+  {id:1, name:"手織りコースター 2枚セット", price:1200, emoji:"🧶", cls:"v1", desc:"手織りの綿素材。色柄は一点ごとに異なります。", badge:"人気"},
+  {id:2, name:"陶器のマグカップ（信楽風）", price:3400, emoji:"☕", cls:"v2", desc:"ひとつずつろくろで成形。持ち手のフィット感が自慢です。", badge:""},
+  {id:3, name:"天然木のカトラリーセット", price:2600, emoji:"🥄", cls:"v3", desc:"クルミ材を蜜蝋仕上げ。スプーン・フォークの2本組。", badge:""},
+  {id:4, name:"刺繍ブローチ（季節の花）", price:1800, emoji:"🌸", cls:"v4", desc:"一針ずつ手刺繍。洋服やバッグのワンポイントに。", badge:"新作"},
+  {id:5, name:"リネンのエコバッグ", price:2200, emoji:"👜", cls:"v5", desc:"丈夫なリネン生地。A4がすっぽり入る大きめサイズ。", badge:""},
+  {id:6, name:"ガラスの小物入れ", price:2900, emoji:"🫙", cls:"v6", desc:"職人の手吹きガラス。光の当たり方で表情が変わります。", badge:""},
+  {id:7, name:"革のキーケース", price:4800, emoji:"🔑", cls:"v7", desc:"栃木レザー使用。使い込むほど味わいが深まります。", badge:"おすすめ"},
+  {id:8, name:"ドライフラワーのミニブーケ", price:1500, emoji:"💐", cls:"v8", desc:"季節の花を束ねた、玄関やデスクにちょうどいいサイズ。", badge:""}
+];
+var SHIPPING = 550, FREE_LIMIT = 8000;
+var cart = {}; // id -> qty
+
+function yen(n){ return "¥" + n.toLocaleString("ja-JP"); }
+
+function renderProducts(){
+  var html = "";
+  PRODUCTS.forEach(function(p){
+    html += '<article class="product">'
+      + '<div class="visual ' + p.cls + '" aria-hidden="true">' + p.emoji + '</div>'
+      + '<div class="body">'
+      + (p.badge ? '<span class="badge">' + p.badge + '</span>' : '')
+      + '<h3>' + p.name + '</h3>'
+      + '<p class="desc">' + p.desc + '</p>'
+      + '<div class="row"><span class="price">' + yen(p.price) + ' <small>税込</small></span>'
+      + '<button class="add-btn" type="button" data-add="' + p.id + '">カートに入れる</button></div>'
+      + '</div></article>';
+  });
+  document.getElementById('grid').innerHTML = html;
+  document.querySelectorAll('[data-add]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      addToCart(parseInt(btn.dataset.add, 10));
+      btn.classList.add('added'); btn.textContent = '✓ 入れました';
+      setTimeout(function(){ btn.classList.remove('added'); btn.textContent = 'カートに入れる'; }, 1200);
+    });
+  });
+}
+
+function addToCart(id){
+  cart[id] = (cart[id] || 0) + 1;
+  renderCart();
+  var p = PRODUCTS.find(function(x){ return x.id === id; });
+  showToast(p.name + ' をカートに入れました');
+}
+function setQty(id, qty){
+  if (qty <= 0) { delete cart[id]; } else { cart[id] = qty; }
+  renderCart();
+}
+function cartTotals(){
+  var subtotal = 0, count = 0;
+  Object.keys(cart).forEach(function(k){
+    var p = PRODUCTS.find(function(x){ return x.id === parseInt(k, 10); });
+    subtotal += p.price * cart[k]; count += cart[k];
+  });
+  var shipping = (subtotal === 0 || subtotal >= FREE_LIMIT) ? 0 : SHIPPING;
+  return {subtotal: subtotal, shipping: shipping, total: subtotal + shipping, count: count};
+}
+function renderCart(){
+  var t = cartTotals();
+  document.getElementById('cartCount').textContent = t.count;
+  var box = document.getElementById('cartItems');
+  var ids = Object.keys(cart);
+  if (ids.length === 0) {
+    box.innerHTML = '<p class="empty">カートは空です。<br>気になる商品を入れてみてください。</p>';
+  } else {
+    box.innerHTML = ids.map(function(k){
+      var p = PRODUCTS.find(function(x){ return x.id === parseInt(k, 10); });
+      var q = cart[k];
+      return '<div class="cart-item"><div class="emoji">' + p.emoji + '</div>'
+        + '<div class="info"><div class="nm">' + p.name + '</div><div class="pr">' + yen(p.price) + ' × ' + q + ' = ' + yen(p.price * q) + '</div>'
+        + '<button class="remove" type="button" data-remove="' + p.id + '">削除</button></div>'
+        + '<div class="qty"><button type="button" data-dec="' + p.id + '" aria-label="減らす">−</button><span>' + q + '</span><button type="button" data-inc="' + p.id + '" aria-label="増やす">＋</button></div></div>';
+    }).join('');
+    box.querySelectorAll('[data-inc]').forEach(function(b){ b.addEventListener('click', function(){ setQty(parseInt(b.dataset.inc,10), (cart[b.dataset.inc]||0) + 1); }); });
+    box.querySelectorAll('[data-dec]').forEach(function(b){ b.addEventListener('click', function(){ setQty(parseInt(b.dataset.dec,10), (cart[b.dataset.dec]||0) - 1); }); });
+    box.querySelectorAll('[data-remove]').forEach(function(b){ b.addEventListener('click', function(){ setQty(parseInt(b.dataset.remove,10), 0); }); });
+  }
+  document.getElementById('subtotal').textContent = yen(t.subtotal);
+  document.getElementById('shippingFee').textContent = t.subtotal === 0 ? "¥0" : (t.shipping === 0 ? "無料" : yen(t.shipping));
+  document.getElementById('grandTotal').textContent = yen(t.total);
+  document.getElementById('freeShipNote').textContent =
+    (t.subtotal > 0 && t.subtotal < FREE_LIMIT) ? ("あと " + yen(FREE_LIMIT - t.subtotal) + " で送料無料") : (t.subtotal >= FREE_LIMIT ? "送料無料が適用されています 🎉" : "");
+}
+function showToast(text){
+  var el = document.getElementById('toast');
+  el.textContent = text; el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2200);
+}
+var drawer = document.getElementById('drawer'), overlay = document.getElementById('overlay');
+function openCart(){ drawer.classList.add('open'); overlay.classList.add('show'); }
+function closeCart(){ drawer.classList.remove('open'); overlay.classList.remove('show'); }
+document.getElementById('openCart').addEventListener('click', openCart);
+document.getElementById('closeCart').addEventListener('click', closeCart);
+overlay.addEventListener('click', closeCart);
+document.getElementById('checkoutBtn').addEventListener('click', function(){
+  var t = cartTotals();
+  if (t.count === 0) { showToast('カートが空です'); return; }
+  showToast('合計 ' + yen(t.total) + ' — サンプルのため購入は完了しません');
+});
+renderProducts();
+renderCart();
+</script>
+</body>
+</html>

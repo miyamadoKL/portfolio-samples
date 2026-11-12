@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>こむぎ堂 | 街の小さなパン屋</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    background: #fdf8f0;
+    color: #4a3a2a;
+    line-height: 1.8;
+  }
+  header {
+    background: #c8935a;
+    color: #fff;
+    text-align: center;
+    padding: 48px 16px;
+  }
+  header h1 { font-size: 2.6rem; letter-spacing: 0.2em; }
+  header p { margin-top: 8px; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+  section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(120, 80, 40, 0.1);
+  }
+  h2 {
+    font-size: 1.3rem;
+    color: #a06a32;
+    border-bottom: 2px solid #f0dcc0;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 8px 4px; text-align: left; border-bottom: 1px dashed #ead7bd; }
+  .menu li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ead7bd;
+  }
+  .menu li:last-child, tr:last-child td, tr:last-child th { border-bottom: none; }
+  .menu .desc { display: block; font-size: 0.85rem; color: #8a7560; }
+  .price { font-weight: bold; color: #a06a32; white-space: nowrap; margin-left: 16px; }
+  footer { text-align: center; font-size: 0.85rem; color: #8a7560; padding: 24px 16px; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>こむぎ堂</h1>
+    <p>毎朝、石窯で焼きあげる街の小さなパン屋</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>営業時間</h2>
+      <table>
+        <tr><th>火〜土</th><td>7:00 〜 18:00</td></tr>
+        <tr><th>日・祝</th><td>8:00 〜 16:00</td></tr>
+        <tr><th>定休日</th><td>毎週月曜日</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>メニュー</h2>
+      <ul class="menu">
+        <li><span>こむぎ食パン<span class="desc">北海道産小麦100%、もっちり食感の看板商品</span></span><span class="price">¥420</span></li>
+        <li><span>クロワッサン<span class="desc">発酵バターを贅沢に折り込んだサクサク生地</span></span><span class="price">¥260</span></li>
+        <li><span>あんバターサンド<span class="desc">自家製つぶあんと有塩バターの名コンビ</span></span><span class="price">¥320</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>アクセス</h2>
+      <p>〒000-0000<br>架空県こむぎ市ひだまり町1-2-3</p>
+      <p>ひだまり駅 東口より徒歩5分</p>
+    </section>
+  </main>
+
+  <footer>&copy; こむぎ堂（架空の店舗です）</footer>
+</body>
+</html>

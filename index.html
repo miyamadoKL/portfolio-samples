@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>制作サンプル集 | Web制作・業務自動化</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; color: #222; background: #faf8f5; line-height: 1.7; }
+  header { background: #1f2a37; color: #fff; padding: 48px 20px 40px; text-align: center; }
+  header h1 { font-size: 1.7rem; margin-bottom: 10px; }
+  header p { opacity: .85; font-size: .95rem; }
+  main { max-width: 960px; margin: 0 auto; padding: 36px 20px 60px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card { background: #fff; border: 1px solid #e5e0d8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; }
+  .card h2 { font-size: 1.15rem; margin-bottom: 8px; }
+  .card .tag { display: inline-block; font-size: .72rem; background: #eef2f5; color: #33506b; border-radius: 999px; padding: 2px 10px; margin-bottom: 12px; align-self: flex-start; }
+  .card p { font-size: .9rem; color: #555; flex: 1; }
+  .card a { margin-top: 16px; display: inline-block; text-align: center; background: #b3543f; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: .9rem; }
+  .card a:hover { background: #9c4634; }
+  .price { margin-top: 28px; background: #fff; border: 1px solid #e5e0d8; border-radius: 12px; padding: 24px; }
+  .price h2 { font-size: 1.1rem; margin-bottom: 10px; }
+  .price ul { list-style: none; font-size: .92rem; }
+  .price li { padding: 6px 0; border-bottom: 1px dashed #eee; }
+  .price li:last-child { border-bottom: none; }
+  footer { text-align: center; color: #888; font-size: .8rem; padding: 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>制作サンプル集</h1>
+  <p>Web制作（LP・店舗サイト・小規模EC）と業務自動化のポートフォリオです。<br>各サンプルは実際にブラウザで操作できます。</p>
+</header>
+<main>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">飲食店LP</span>
+      <h2>旬彩 ながた（和食・居酒屋）</h2>
+      <p>メニューのタブ切替、コース案内、電話予約ボタンと予約フォームを備えた飲食店向けランディングページ。スマホ対応。</p>
+      <a href="./restaurant-lp/">サンプルを見る</a>
+    </div>
+    <div class="card">
+      <span class="tag">SaaS LP</span>
+      <h2>タスクル（業務自動化サービス）</h2>
+      <p>課題→機能→料金→事例→FAQの王道構成。料金プラン3段階と申込みフォーム付きのサービス紹介ページ。</p>
+      <a href="./saas-lp/">サンプルを見る</a>
+    </div>
+    <div class="card">
+      <span class="tag">小規模EC</span>
+      <h2>てづくり堂（ハンドメイド雑貨）</h2>
+      <p>商品8点のカタログと、実際に動作するカート（数量変更・送料計算・合計表示）を実装したECサイト風サンプル。</p>
+      <a href="./ec-shop/">サンプルを見る</a>
+    </div>
+    <div class="card">
+      <span class="tag">パン屋サイト</span>
+      <h2>こむぎ堂</h2>
+      <p>短時間で仕上げる小規模サイトの例。店舗情報とメニューを1ページにまとめたシンプルな構成です。</p>
+      <a href="./bakery-test/">サンプルを見る</a>
+    </div>
+  </div>
+  <div class="price">
+    <h2>料金の目安</h2>
+    <ul>
+      <li>LP制作（1ページ・スマホ対応込み）　¥30,000〜</li>
+      <li>店舗サイト（5ページ程度）　¥50,000〜</li>
+      <li>GAS / Python 業務自動化（小規模）　¥10,000〜</li>
+      <li>サイトの小改修・文言差し替え　¥5,000〜</li>
+    </ul>
+  </div>
+</main>
+<footer>※ 本ページの店舗・商品・事例はすべてポートフォリオ用の架空サンプルです。</footer>
+</body>
+</html>
